@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_login_phone_opt"
+    android:orientation="vertical"
+    tools:context=".Login_Opt_Ativity">
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/the_message_code"
+        android:textSize="45sp"
+        android:layout_marginStart="10dp"
+        android:layout_gravity="left"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        tools:ignore="RtlHardcoded" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/Enter_the_code_sent_to_your_phone_number"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="50dp"
+        android:letterSpacing="0.01"
+        android:textStyle="normal"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:background="@drawable/edit_text"
+        >
+        <EditText
+            android:id="@+id/etOtp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/edit_text"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical"
+            android:hint="@string/_000_000"
+            android:inputType="number"
+            android:maxLength="6"
+            android:textSize="17sp"
+            tools:ignore="InvalidId" />
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="200dp"
+    android:gravity="center"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/didn_t_receive_the_code"
+        android:textColor="@color/text"
+        android:textSize="14sp"/>
+    <TextView
+        android:id="@+id/resend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/resend_code"
+        android:textColor="@color/attention"
+        android:textSize="15sp"
+        android:textStyle="bold"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:layout_marginBottom="10dp"
+        android:gravity="bottom"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+    <Button
+        android:id="@+id/buttonVerify"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/btn"
+        android:text="@string/login"
+        android:textSize="15sp"
+        android:letterSpacing="0.01"
+        android:textColor="@color/white"
+        />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>
