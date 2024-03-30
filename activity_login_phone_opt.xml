@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/activity_login_phone_opt"
+    tools:context=".Login_Phone_Opt_Activity">
+<TextView
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:text="phone number "
+    android:textSize="45dp"
+    android:layout_marginStart="10dp"
+    android:layout_gravity="left"
+    android:textColor="@color/white"
+    android:textStyle="bold"
+    />
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="105dp"
+        android:letterSpacing="0.1"
+        android:text="@string/enter_mobile_number"
+        android:textSize="27sp"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/please_enter_your_phone_number_we_will_send_you_a_code_in_a_message"
+        android:textSize="18sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginBottom="260dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:padding="1dp"
+        android:background="@drawable/edit_text"
+
+        >
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/login_country_code"
+            android:layout_width="84dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            app:ccp_defaultNameCode="dz"
+            app:ccp_showFlag="false"
+            app:ccp_showNameCode="false"
+            app:ccp_textSize="19dp" />
+
+        <EditText
+            android:id="@+id/phoneinput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_text"
+            android:drawableStart="@drawable/phone_icon"
+            android:textSize="17sp"
+            android:gravity="center_vertical"
+            tools:ignore="InvalidId"
+            android:hint="@string/_000_000_000"
+            android:inputType="phone"
+            android:maxLength="12"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/btn"
+                android:text="  Send code  "
+                android:textSize="15sp"
+                android:letterSpacing="0.01"
+                android:textColor="@color/white"
+                />
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
